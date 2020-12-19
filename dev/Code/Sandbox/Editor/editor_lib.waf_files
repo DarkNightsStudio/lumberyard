@@ -290,6 +290,8 @@
             "Core/EditorFilePathManager.h",
             "Core/LevelEditorMenuHandler.cpp",
             "Core/LevelEditorMenuHandler.h",
+			"Core/EditorProjectMenu.cpp",
+			"Core/EditorProjectMenu.h",
             "StartupTraceHandler.cpp",
             "StartupTraceHandler.h"
         ],

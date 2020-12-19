@@ -37,7 +37,7 @@
 #include <QDesktopServices>
 #include <QHBoxLayout>
 #include <QUrl>
-
+#include "Core/EditorProjectMenu.h"
 using namespace AZ;
 using namespace AzToolsFramework;
 
@@ -211,6 +211,11 @@ void LevelEditorMenuHandler::Initialize()
 
     // have to do this after creating the AWS Menu for the first time
     ResetToolsMenus();
+	auto projectMenu = EditorProjectMenu::Get().CreateMenu(m_actionManager, m_topLevelMenus);
+	if (projectMenu)
+	{
+	  m_topLevelMenus << projectMenu;
+	}
 
     // Add our menus to the main window menu bar
     QMenuBar* menuBar = m_mainWindow->menuBar();
@@ -219,6 +224,7 @@ void LevelEditorMenuHandler::Initialize()
     {
         menuBar->addMenu(menu);
     }
+
 }
 
 bool LevelEditorMenuHandler::MRUEntryIsValid(const QString& entry, const QString& gameFolderPath)

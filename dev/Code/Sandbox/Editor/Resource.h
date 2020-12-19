@@ -497,6 +497,9 @@
 #define ID_GAME_SALEM_ENABLEMEDIUMSPEC              34611
 #define ID_GAME_SALEM_ENABLEHIGHSPEC                34612
 #define ID_FILE_RESAVESLICES                        36210
+#define PROJECT_MENU_ACTION_COUNT                    1024
+#define ID_PROJECT_MENU_FIRST                        45000
+#define ID_PROJECT_MENU_LAST                         (ID_PROJECT_MENU_FIRST + PROJECT_MENU_ACTION_COUNT - 1)
 #define FIRST_QT_ACTION                      50000
 #define ID_VIEW_ROLLUPBAR                    50000
 #define ID_VIEW_CONSOLEWINDOW                50001

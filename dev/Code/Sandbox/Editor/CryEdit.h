@@ -351,6 +351,7 @@ public:
     void OnMissionSelect();
     void OnLockSelection();
     void OnEditLevelData();
+	void OnProjectMenuSelected(UINT id);
     void OnFileEditLogFile();
     void OnFileResaveSlices();
     void OnFileEditEditorini();

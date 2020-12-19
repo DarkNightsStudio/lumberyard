@@ -353,7 +353,8 @@
             "ToolsComponents/AzToolsFrameworkConfigurationSystemComponent.cpp"
         ],
         "ToolsMessaging": [
-            "ToolsMessaging/EntityHighlightBus.h"
+            "ToolsMessaging/EntityHighlightBus.h",
+			"ToolsMessaging/ProjectMenuBus.h"
         ],
         "UI/Docking": [
             "UI/Docking/DockWidgetUtils.cpp",

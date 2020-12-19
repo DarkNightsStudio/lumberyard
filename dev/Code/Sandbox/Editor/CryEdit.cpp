@@ -298,6 +298,8 @@
 #include <AzFramework/Render/Intersector.h>
 #endif
 
+#include "Core/EditorProjectMenu.h"
+
 static const char defaultFileExtension[] = ".ly";
 static const char oldFileExtension[] = ".cry";
 
@@ -998,7 +1000,7 @@ void CCryEditApp::RegisterActionHandlers()
     AZ_TOOLS_EXPAND_FOR_RESTRICTED_PLATFORMS
 #undef AZ_RESTRICTED_PLATFORM_EXPANSION
 #endif
-
+	ON_COMMAND_RANGE(ID_PROJECT_MENU_FIRST, ID_PROJECT_MENU_LAST, OnProjectMenuSelected)
     ON_COMMAND(ID_OPEN_QUICK_ACCESS_BAR, OnOpenQuickAccessBar)
 
     ON_COMMAND(ID_FILE_SAVE_LEVEL, OnFileSave)
@@ -9526,7 +9528,10 @@ bool CCryEditApp::OpenSetupAssistant() const
 
     return true;
 }
-
+void CCryEditApp::OnProjectMenuSelected(UINT id)
+{
+  EditorProjectMenu::Get().ActionSelected(id);
+}
 QString CCryEditApp::GetRootEnginePath() const
 {
     return m_rootEnginePath;
